@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  background-color: #111;
+}
+
+.salute {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.saluteTextContainer {
+  flex: 3;
+}
+
+.saluteImgContainer {
+  flex: 1;
+}
+
+.saluteText {
+  color: #333;
+  font-size: 60vw;
+  cursor: default;
+}
+
+.saluteImg {
+  width: 100%;
+}
+
+.nameContainer {
+  height: 100vh;
+  background-color: purple;
+}
+
+.name {
+  font-size: 15vw;
+  color: #333;
+  cursor: default;
+  text-align: center;
+  line-height: 100vh;
+}
+
+.jobTitleContainer {
+  height: 100vh;
+}
+
+.jobTitleContainer,
+.dark {
+  background: url("./img/bg1.png");
+}
+
+.jobTitleContainer,
+.purple {
+  background: rebeccapurple url("./img/bg2.png");
+}
+
+.jobTitle {
+  color: #333;
+  line-height: 100vh;
+  font-size: 10vw;
+  cursor: default;
+}
