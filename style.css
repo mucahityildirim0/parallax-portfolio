@@ -6,6 +6,7 @@
 
 .container {
   background-color: #111;
+  overflow: hidden;
 }
 
 .salute {
@@ -35,11 +36,11 @@
 
 .nameContainer {
   height: 100vh;
-  background-color: purple;
+  background-color: rebeccapurple;
 }
 
 .name {
-  font-size: 15vw;
+  font-size: 20vw;
   color: #333;
   cursor: default;
   text-align: center;
@@ -50,20 +51,17 @@
   height: 100vh;
 }
 
-.jobTitleContainer,
 .dark {
   background: url("./img/bg1.png");
 }
-
-.jobTitleContainer,
 .purple {
   background: rebeccapurple url("./img/bg2.png");
 }
 
 .jobTitle {
+  font-size: 10vw;
   color: #333;
   line-height: 100vh;
-  font-size: 10vw;
   cursor: default;
 }
 
@@ -92,6 +90,7 @@
 }
 
 .phone {
+  flex: 1;
   width: 300px;
   height: 600px;
   position: relative;
@@ -100,7 +99,6 @@
 .phoneScreen {
   width: 264px;
   height: 567px;
-  background-color: blue;
   position: absolute;
   top: 17px;
   left: 18px;
@@ -108,7 +106,7 @@
   overflow: scroll;
 }
 
-.phoneScreen::-webkits-scrollbar {
+.phoneScreen::-webkit-scrollbar {
   display: none;
 }
 
@@ -148,9 +146,9 @@
 
 .projectButton::after {
   content: "View Demo";
-  position: absolute;
   width: 100%;
   height: 100%;
+  position: absolute;
   top: 0;
   left: -100%;
   transition: 1s all;
@@ -164,8 +162,6 @@
 .projectButton:hover.projectButton::after {
   transform: translateX(100%);
 }
-
-/* LAPTOP */
 
 .laptop {
   width: 600px;
@@ -187,13 +183,13 @@
   width: 100%;
 }
 
-.laptopScreen::-webkits-scrollbar {
+.laptopScreen::-webkit-scrollbar {
   display: none;
 }
 
 .githubContainer {
-  display: flex;
   height: 100vh;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -239,7 +235,49 @@
 .githubChart:hover .active:nth-child(2n + 1) {
   background-color: #195b2c;
 }
-
 .githubChart:hover .active:nth-child(2n) {
   background-color: #063f24;
+}
+
+.githubSm {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .projects {
+    padding: 0 30px;
+    text-align: center;
+  }
+
+  .project {
+    flex-direction: column;
+    height: max-content;
+  }
+  .project:nth-child(2n) {
+    flex-direction: column;
+  }
+
+  .phone,
+  .laptop {
+    transform: none !important;
+  }
+
+  .githubChart {
+    display: none;
+  }
+
+  .githubTitle {
+    text-align: center;
+    font-size: 10vw;
+  }
+
+  .githubSm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: #555;
+    font-size: 30px;
+    text-align: center;
+  }
 }
